@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    line-height: 1.4;
+    font-weight: 300;
+}
+.hero{
+    position: relative;
+    background-color: blue;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text_container{
+    max-width: 527px;
+    margin: 0 auto;
+    color: white; 
+    padding-top: 64px;
+    padding-left: 16px;
+}
+.img_container{
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-right: 16px;
+  
+}
+.image1{
+    max-width: 363px;
+    height: 300px;
+}
+.lg_text{
+    font-size: 70px;
+}
+.cards{
+    display:grid;
+    max-width: 900px;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ column-gap: 50px;
+ margin: 20px auto;
+
+}
+.card1{
+     perspective: 1000px;
+    position: relative;
+    height:360px;
+    width: 300px;
+    border: 2px solid black;
+    box-shadow: 4px 3px 5px rgba(1,1,1,0.2);
+}
+.main{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    position: absolute;
+    gap: 30px;
+}
+.front{
+    position: absolute;
+    height:360px;
+    width: 300px;
+    border: 2px solid black;
+     box-shadow: 4px 3px 5px rgba(1,1,1,0.2);
+    backface-visibility: hidden;
+    z-index: 2;
+    gap: 20px;
+}
+.back{
+    position: absolute;
+    height:360px;
+    width: 300px;
+    background-color: skyblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    transform: rotateY(180deg);
+    border: 2px solid black;
+ box-shadow: 4px 3px 5px rgba(1,1,1,0.2);
+    backface-visibility: hidden;
+}
+
+.main:hover{
+   transform: rotateY(180deg);
+}
+.image2{
+    height:211px;
+    width: 294px;
+}
+.card_text{
+    margin-top: 19px;
+    text-align: center;
+}
+.button_container{
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   margin-top: 4px;
+}
+button{
+height: 23px;
+width: 65px;
+background-color: skyblue;
+font-weight: 500;
+font-size: 15px;
+box-shadow: 4px 3px 5px transparent 2px;
+cursor: pointer;
+border-radius: 6px;
+}
+.bottom{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,2fr));
+    margin-top: 30px;
+}
+.about{
+    background-color: red;
+    height: 200px;
+    padding:29px;
+}
+.contact{
+    background-color:green;
+     height: 200px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.form_control{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px;
+}
+label{
+      font-size: 15px;
+    font-weight: 500;
+}
+footer{
+    background-color: black;
+    color: white;
+    height: 39px;
+    text-align: center;
+    padding-top: 7px;
+}
+@media (max-width:460px) {
+    .about{
+    background-color: red;
+    height: 280px;
+    padding:29px;
+}
+   .cards{
+    display:grid;
+    max-width: 900px;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ column-gap: 50px;
+ margin:10px 60px;
+
+} 
+.card1{
+     perspective: 1000px;
+    position: relative;
+    height:360px;
+    width: 300px;
+    border: 2px solid black;
+    box-shadow: 4px 3px 5px rgba(1,1,1,0.2);
+    margin-bottom: 20px;
+}
+.hero{
+    background-color: blue;
+    background-position: center;
+    height: 950px;
+    display:flex;
+    flex-direction: column;
+}
+.text_container{
+    max-width: 550px;
+    margin: 0 auto;
+    color: white; 
+    padding-top: 64px;
+    padding-left: 13px;
+}
+.img_container{
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 3px;
+    padding-right: 16px;
+     margin-bottom: 50px;
+  
+}
+.image1{
+    max-width: 363px;
+    height: 300px;
+}
+}
